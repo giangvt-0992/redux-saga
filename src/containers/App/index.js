@@ -2,20 +2,20 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import styles from './style';
+import TaskBoard from '../Taskboard';
+import { Provider } from "react-redux";
+import configureStore from '../../redux/configureStore';
+
+const store = configureStore();
 
 function App(props) {
   const { classes } = props;
   return (
-    <div className="App">
-      <Button variant="contained" color="primary">
-        Primary
-      </Button>
-      <div className={classes.box}>
-        <div className={classes.shape}>Reactjs</div>
-        <div className={classes.shape}>Vuejs</div>
-        <div className={classes.shape}>AngularJS</div>
+    <Provider store={store}>
+      <div className="App">
+        <TaskBoard />
       </div>
-    </div>
+    </Provider>
   );
 }
 
