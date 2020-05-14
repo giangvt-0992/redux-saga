@@ -1,0 +1,26 @@
+$mycolor: #000000;
+.global-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($mycolor, $alpha: 0.5);
+  z-index: 10000;
+}
+
+.global-loading {
+  img {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+
+    margin: auto;
+    width: 100px;
+  }
+}
+
+.hidden {
+  display: none;
+}

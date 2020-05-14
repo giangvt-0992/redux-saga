@@ -5,6 +5,7 @@ import styles from './style';
 import TaskBoard from '../Taskboard';
 import { Provider } from "react-redux";
 import configureStore from '../../redux/configureStore';
+import GlobalLoading from '../../components/GlobalLoading';
 
 const store = configureStore();
 
@@ -13,6 +14,7 @@ function App(props) {
   return (
     <Provider store={store}>
       <div className="App">
+        <GlobalLoading />
         <TaskBoard />
       </div>
     </Provider>
